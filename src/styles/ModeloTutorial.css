@@ -1,0 +1,64 @@
+
+
+/* CÓDIGO CSS - MODELO TUTORIAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.app-containerLogin * {
+    font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.modelo-tutorial .modelo-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  .modelo-tutorial .modelo-logo a {
+    color: #e89404;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+  }
+    
+  .modelo-tutorial .modelo-nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .modelo-tutorial .modelo-nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .modelo-tutorial .modelo-auth-section {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .modelo-tutorial .modelo-auth-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .modelo-tutorial .modelo-profile-link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .modelo-tutorial .modelo-auth-button:hover, .modelo-profile-link:hover {
+    opacity: 0.8;
+  }
+  

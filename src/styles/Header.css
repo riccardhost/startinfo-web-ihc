@@ -1,0 +1,47 @@
+
+/** 
+
+
+
+****/
+
+/* CÓDIGO CSS - NAVBAR */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.app-containerLogin * {
+    font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#banner {
+    background-image: url('../assets/banner-idosos04.jpg');
+    background-size: cover ; /* Ajusta a imagem para cobrir todo o espaço */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    min-height: 73vh; /* Faz o componente ocupar a altura da tela */
+  }
+
+/* Estilos gerais do header */
+.container-header {
+    background-color: #e68a0000;
+    padding: 100px 0;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Container da logomarca e título */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Tamanho e estilo da logomarca */
+.logo {
+    width: 220px;
+    margin: 10px;
+    filter: drop-shadow(0px 2px 1px #00000093);
+}
+

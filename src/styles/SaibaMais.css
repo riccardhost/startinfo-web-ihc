@@ -1,0 +1,18 @@
+
+
+.link-saiba-mais {
+    color: #e40000;
+    font-size: 1.3rem;
+    text-decoration: none; 
+    font-weight: bold;
+    padding-left: 30px;
+  }
+  
+  .link-saiba-mais:hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: underline;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }

@@ -1,0 +1,153 @@
+
+
+/* CÓDIGO CSS - NAVBAR */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+ 
+.app-containerLogin * {
+    font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.navbar-modelo-tutorial .navbar-modelo-navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.navbar-modelo-tutorial .navbar-modelo-logo a {
+    color: #e89404;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar-modelo-tutorial .navbar-modelo-nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-modelo-tutorial .navbar-modelo-nav-link {
+    font-size: 1.1rem;
+    color: #e89404;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 3px 32px;
+    background-color: transparent;
+    border: 2px solid #e8940400;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;  
+}
+
+/* Hover do botão */
+.navbar-modelo-tutorial .navbar-modelo-nav-link:hover {
+    transition: ease .3s;
+    color: #fff;
+    border: 2px solid #ea0000;
+}
+
+/* Efeito de pressionamento do botão */
+.navbar-modelo-tutorial p:active {
+    transform: translateY(1px);
+}
+
+.navbar-modelo-tutorial p:hover::after {
+    transform: scaleX(1);
+}
+
+/* Animação da borda inferior do botão */
+.navbar-modelo-tutorial p::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #007BFF;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar-modelo-tutorial .navbar-modelo-auth-section {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.navbar-modelo-tutorial .navbar-modelo-auth-button {
+    text-align: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.navbar-modelo-tutorial .navbar-modelo-profile-link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-modelo-tutorial .navbar-modelo-auth-button:hover, .navbar-modelo-tutorial .navbar-modelo-profile-link:hover {
+    opacity: 0.8;
+}
+
+/* Campo de pesquisa */
+.nav-search-container-bar {
+    width: 340px;
+    display: flex;
+    justify-content: center; /* Centraliza o campo de pesquisa */
+    position: relative;
+    filter: drop-shadow(0px 2px 2px #00000058);
+}
+
+/* Estilo para o campo de entrada de texto */
+.nav-search-input-bar {
+    width: 300px;
+    height: 20px;
+    padding: 8px 50px 8px 12px; /* Espaço para o ícone */
+    font-size: 1rem;
+    font-weight: 500;
+    border: 2px solid #e89404;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Colocando o ícone dentro do campo de pesquisa */
+.nav-search-input-bar:focus {
+    border-color: #da7000; /* Cor do foco */
+}
+
+/* Estilo para o botão de pesquisa */
+.nav-search-button-bar {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%); /* Alinha o ícone verticalmente ao centro */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #e89404;
+    font-size: 1.6rem;
+    font-weight: 900;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Efeito ao passar o mouse sobre o ícone */
+.nav-search-button-bar:hover {
+    color: #da7000;
+}

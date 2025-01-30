@@ -1,0 +1,78 @@
+
+
+
+src/
+├── assets/
+│   └── images/              # Suas imagens
+├── components/
+│   ├── carrossel/
+│   │   └── Carrossel.jsx    # Carrossel component
+│   ├── header/
+│   │   └── Header.jsx       # Header component
+│   ├── footer/
+│   │   └── Footer.jsx       # Footer component
+├── pages/
+│   ├── home/
+│   │   └── Home.jsx         # Página Home
+│   ├── login/
+│   │   └── Login.jsx        # Página Login
+│   ├── signup/
+│   │   └── Signup.jsx       # Página Signup
+│   ├── quemsomos/
+│   │   └── QuemSomos.jsx    # Página Quem Somos
+│   ├── tutoriais/
+│   │   └── Tutoriais.jsx    # Página Tutoriais
+├── services/                # Seu código para comunicação com API ou serviços
+├── styles/                  # Arquivos CSS
+│   ├── Carrossel.css
+│   ├── Header.css
+│   ├── Home.css
+│   ├── Login.css
+│   ├── Signup.css
+│   ├── QuemSomos.css
+│   ├── Tutoriais.css
+│   ├── Footer.css
+├── Rotas.jsx                # Arquivo de configuração das rotas
+├── App.js                   # Arquivo principal da aplicação
+├── index.js                 # Ponto de entrada
+
+
+
+
+
+
+
+
+
+meus diretórios estão organizados assim:
+
+src/assets
+src/assets/images
+
+src/components/carrossel/Carrossel.jsx
+src/components/header/Header.jsx
+src/components/footer/Footer.jsx
+
+src/pages/home/Home.jsx
+src/pages/login/Login.jsx
+src/pages/signup/Signup.jsx
+src/pages/quemsomos/QuemSomos.jsx
+src/pages/tutoriais/Tutoriais.jsx
+
+src/services
+src/styles/Carrossel.css
+src/styles/Header.css
+src/styles/Home.css
+src/styles/Login.css
+src/styles/Signup.css
+src/styles/QuemSomos.css
+src/styles/Tutoriais.css
+src/styles/Footer.css
+
+src/Rotas.jsx
+
+configure o arquivo Rotas.jsx
+
+src/App.js
+
+configure o arquivo App.js

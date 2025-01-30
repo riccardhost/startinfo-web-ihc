@@ -1,0 +1,17 @@
+
+frontend/
+├── public/                     # Arquivos estáticos (index.html, ícones, etc.)
+├── src/
+│   ├── assets/                 # Imagens, fontes e outros recursos
+│   ├── components/             # Componentes reutilizáveis
+│   ├── pages/                  # Páginas principais (ex: Home, Login, etc.)
+│   ├── services/               # Comunicação com o backend (API calls)
+│   ├── App.js                  # Configuração das rotas principais
+│   ├── index.js                # Ponto de entrada da aplicação React
+│   └── styles/                 # Estilos globais e específicos
+├── package.json                # Dependências do projeto React
+└── .env                        # Variáveis de ambiente (ex: URL do backend)
+
+
+
+

@@ -1,0 +1,117 @@
+
+
+
+.contato-container {
+  width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.665);
+  background-color: #f9f9f9;
+}
+
+.contato-container h1 {
+  font-size: 1.9rem;
+  text-align: center;
+  margin: 0;
+  color: #000000;
+  text-shadow: 1px 1px 1px #5a5757c7;
+}
+
+.contato-container h3 {
+  text-align: center;
+  color: #000000;
+  text-align: left;
+}
+
+.contato-container .input-container {
+  margin-bottom: 15px;
+}
+
+.contato-container .input-container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contato-container .input-container input,
+.input-container select,
+.input-container textarea {
+  width: 560px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border: 2px solid #e89404;
+  border-radius: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de foco */
+.contato-container .input-container input:focus,
+.input-container select:focus,
+.input-container textarea:focus {
+  border: 2px solid #da0000;
+  box-shadow: 0px 0px 8px rgba(218, 0, 0, 0.7);
+  outline: none; /* Remove o contorno padrão do navegador */
+}
+
+.contato-container select {
+  appearance: none; /* Remove o estilo padrão do select */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: white;
+  padding-right: 35px; /* Espaço para o ícone */
+  border: 2px solid #e89404;
+}
+
+.select-container {
+  position: relative; /* Para posicionar o ícone */
+}
+
+.select-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%); /* Centraliza o ícone verticalmente */
+  font-size: 1.2rem; /* Ajusta o tamanho do ícone */
+  color: #e89404; /* Cor do ícone */
+  pointer-events: none; /* Garante que o clique seja registrado apenas no select */
+}
+
+.contato-container button {
+  width: 600px;
+  padding: 15px;
+  background-color: #e89404;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.555);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s;
+}
+
+.contato-container button:hover {
+  background-color: #da7000;
+  color: #000000;
+  transform: scale(1); /* Ampliação ao passar o mouse */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.562); /* Sombra mais visível */
+}
+
+.contato-container button:active {
+  color: #ffffff;
+  background-color: #eb0000; /* Cor mais escura no clique */
+  transform: scale(0.96); /* Leve redução ao clicar */
+}
+
+/* Estilo para a mensagem de erro */
+.erro-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}

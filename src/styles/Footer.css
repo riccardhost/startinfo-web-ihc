@@ -1,0 +1,219 @@
+
+/** 
+
+
+
+****/
+
+/* --------- CÓDIGO CSS - FOOTER: FOOTER ------------- */
+
+.footer {
+    background-color: #333333;
+    padding: 60px 0px 40px 0px;
+    color: #ffffff;
+}
+
+.container_footer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-links {
+    flex: 1;
+    margin: 33px;
+    /*width: 260px; NÃO ALTERAR*/
+}
+
+.footer-links h4 {
+    text-align: center;
+    font-size: 1.3em;
+    border-radius: 0px 0px 5px 5px;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px #5a5757;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0px;
+    /*width: 250px; NÃO ALTERAR*/
+}
+
+.footer-links ul li {
+    text-align: center;
+    margin-bottom: 12px;
+    /*width: 250px; NÃO ALTERAR*/
+}
+
+.footer-links ul li a {
+    font-size: 1em;
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px #910000;
+    transition: .3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #e89404;
+    padding-left: 5px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-around;
+    /*padding: 10px;   */
+    font-size: 3em;
+}
+
+.social-links li {
+    margin: 0 10px;
+}
+
+.social-links a {
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+.social-links a:hover {
+    color: #e89404;
+}
+
+/* Media Query para telas pequenas */
+@media (max-width: 768px) {
+    .footer-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        flex: none;
+        text-align: center;
+    }
+
+    .footer-links h4 {
+        font-size: 1.3em;
+    }
+
+    .footer-links ul li a {
+        font-size: 1em;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links li {
+        margin: 10px 0;
+    }
+}
+
+/* Media Query para telas muito pequenas */
+@media (max-width: 640px) {
+    .footer-links h4 {
+        font-size: 1.4em;
+    }
+
+    .footer-links ul li {
+        font-size: 1.1em;
+    }
+}
+
+
+/* ---------- CÓDIGO CSS - COPYRIGHT ---------- */
+
+.copyright {
+    font-size: 0.9em;
+    background-color: #000000;
+    padding: 40px 0px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px #5a5757;
+}
+
+/* ---------- CÓDIGO CSS - DESENVOLVEDOR ---------- */
+
+.footerdev {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 8px;
+    text-align: center;
+}
+
+.footerdev p {
+    font-size: .9em;
+    font-weight: 400;
+    color: #b8b8b8;
+    text-decoration: none;
+}
+
+.footerdev a {
+    font-size: .9em;
+    font-weight: 400;
+    color: #da7000;
+    text-decoration: none;
+}
+
+.footerdev a:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .footerdev {
+        padding: 15px;
+    }
+
+    .footerdev p {
+        font-size: 14px;
+    }
+}
+
+
+
+/* --------- ARQUIVOS CSS - WHATSAPP  ------------- */
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 40px;
+    right: 35px;
+    z-index: 1000;
+    
+    /* Para garantir que o ícone esteja sempre visível */
+}
+
+.whatsapp-icon img {
+    width: 70px;
+    /* Tamanho do ícone */
+    height: auto;
+    border-radius: 5px;
+    filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.6));
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-icon img:hover {
+    transform: scale(1.11);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .whatsapp-icon img {
+        width: 55px;
+        /* Ajuste o tamanho do ícone em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-icon img {
+        width: 55px;
+        /* Ajuste ainda mais o tamanho em telas muito pequenas */
+    }
+}

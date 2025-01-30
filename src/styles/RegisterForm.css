@@ -1,0 +1,327 @@
+
+
+/* App Container Cadastro */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.app-containerRegister * {
+  font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.app-containerRegister {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(900deg, #3aec3a, #ffffff);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Container do Formulário */
+  .form-containerRegister {
+    flex: 1;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.665);
+    border-radius: 10px;
+    margin: 0px 150px;
+  }
+  
+  /* Container da Imagem */
+  .image-containerRegister {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    overflow: hidden;
+    border-radius: 0px 5px 5px 0px;
+    position: relative; /* Permite posicionamento absoluto dos elementos dentro */
+  }
+  
+  .image-containerRegister img {
+    width: 0 auto;
+    height: 100vh;
+    object-fit: cover;
+    transition: transform 0.5s ease;  /* Adicionando transição suave ao efeito hover */ 
+    border-radius: 50px;
+    filter: drop-shadow(5px 25px 10px rgba(0, 0, 0, 0.848));
+    z-index: 1; /* A imagem fica abaixo da caixa de texto */
+  }
+  
+  .image-containerRegister:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Caixa de texto sobre a imagem */
+  .text-overlay {
+    position: absolute;
+    top: 70%;
+    left: 64%;
+    transform: translate(-50%, -50%);
+    color:#e89404;
+    background-color: #e8940400; /* Fundo semitransparente para destacar o texto */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 100%; /* Ajuste conforme necessário */
+    z-index: 10; /* Garante que a caixa de texto fique acima da imagem */
+  }
+  
+  .text-overlay h2 {
+    margin: 0;
+  }
+  
+  .text-overlay p {
+    margin-top: 30px;
+  }
+  
+  /* Login Form Styling */
+  .form-containerRegister .login-formulario {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .form-containerRegister .logo-container {
+    margin: 0;
+  }
+  
+  .form-containerRegister .logo {
+    width: 170px;
+    height: auto;
+    filter: drop-shadow(0px 2px 1px #00000093);
+  }
+  
+  .form-containerRegister h1 {
+  font-size: 4em;
+  font-weight: 900;
+  margin: 0px;
+  padding: 0px 20px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.555);
+  }
+
+  .form-containerRegister h3 {
+    font-size: 2em;
+    font-weight: 900;
+    text-align: center;
+    color:#e89404;
+    margin: 0px;
+    padding: 0px 20px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.555);
+  }
+
+  .form-containerRegister p {
+    font-size: 2em;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 0px;
+    padding: 0px 20px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.555);
+  }
+  
+  .formulary-register {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    width: 380px;
+  }
+  
+  .formulary-register .input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .formulary-register .input-group label {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 5px;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.555);
+  }
+  
+  .formulary-register .input-group input {
+    padding: 10px 18px;
+    width: 340px;
+    border: 2px solid #e89404;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .formulary-register .input-group input:focus {
+    border: 2px solid #da0000; 
+    box-shadow: 0px 0px 8px rgba(218, 0, 0, 0.7); 
+  }
+  
+  .formulary-register .buttonRegister {
+    width: 100%;
+    padding: 8px 16px;
+    background-color: #e89404;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.555);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves para cor, sombra e escala */
+    margin-top: 10px;
+  }
+  
+  .formulary-register .buttonRegister:hover {
+    background-color: #da7000;
+    color: #000000;
+    transform: scale(1); /* Ampliação ao passar o mouse */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.562); /* Sombra mais visível */
+  }
+  
+  .formulary-register .buttonRegister:active {
+    color: #ffffff;
+    background-color: #eb0000; /* Cor mais escura no clique */
+    transform: scale(0.96); /* Leve redução ao clicar */
+  }
+  
+  .formulary-register .forgot-password {
+    text-decoration: none;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .forgot-password p {
+    font-size: 1rem;
+    color: #000;
+    text-align: center;
+  }
+  
+  .forgot-password a {
+    background: none;
+    border: none;
+    color: #ff0000;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .forgot-password a:hover {
+    color: #0056b3;
+    text-decoration: none;
+  }
+  
+  /* Social Login Section */
+  .social-login {
+    text-align: center;
+  }
+  
+  .social-login p {
+    font-size: 1.2rem;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .social-btn {
+    width: 185px;
+    padding: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.555);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves para cor, sombra e escala */
+    margin-bottom: 10px;
+  }
+  
+  .social-btn.facebook {
+    background-color: #3b5998;
+    color: white;
+  }
+  
+  .social-btn.facebook:hover {
+    background-color: #00319a;
+    transform: scale(1); 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.562); 
+  }
+  
+  .social-btn.facebook:active {
+    color: #ffffff;
+    background-color: #0059ff; 
+    transform: scale(0.96); /* Leve redução ao clicar */
+  }
+  
+  .social-btn.google {
+    background-color: #db4437;
+    color: white;
+  }
+  
+  .social-btn.google:hover {
+    background-color: #801300; 
+    transform: scale(1); 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.562); 
+  }
+  
+  .social-btn.google:active {
+    color: #ffffff;
+    background-color: #ff2600; 
+    transform: scale(0.96); /* Leve redução ao clicar */
+  }
+  
+  /* Media Query para telas pequenas */
+  @media (max-width: 768px) {
+    .image-containerRegister, .text-overlay {
+      display: none;
+    }
+    
+    .form-containerRegister {
+      margin: 38px; /* Ajusta a margem do formulário */
+      padding-right: 0px;
+    }
+
+    .formulary-register .input-group input {
+      padding: 10px 18px;
+      width: 320px;
+    }
+    
+    .formulary-register .input-group input:focus {
+      border: 2px solid #da7000; 
+      box-shadow: 0px 0px 6px rgba(218, 113, 0, 0.63); 
+    }
+    
+    .formulary-register .buttonRegister {
+      width: 360px;
+      padding: 8px 16px;
+    }
+    
+    .social-buttons {
+      display: flex;
+      justify-content:flex-start ;
+      gap: 10px;
+      padding: 0 10px;
+    }
+
+    .social-btn {
+      align-items:center;
+      width: 175px;
+    }
+
+  }
+  

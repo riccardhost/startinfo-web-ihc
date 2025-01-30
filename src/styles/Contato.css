@@ -1,0 +1,28 @@
+
+/** 
+
+
+
+****/
+
+#tituloTutorial {
+    text-align: center;
+    padding: 40px 20px;
+    color: #000000; 
+    min-height: 50vh;
+  }
+  
+  .tituloTutorial h1 {
+    margin: 0;
+    color: #000000;
+    font-size: 1.9rem;
+    text-align: center;
+    text-shadow: 1px 1px 1px #5a5757c7;
+  }
+  
+
+
+
+
+
+

@@ -1,0 +1,122 @@
+
+/** 
+
+
+
+****/
+  
+  #tituloHome {
+    text-align: center;
+    padding: 40px 20px;
+    color: #000000; 
+    min-height: 50vh;
+  }
+  
+  .tituloHome h2 {
+    margin: 0px;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 1px 1px 1px #5a5757c7;
+  }
+  
+  .tituloHome p {
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 10px;
+    padding: 30px 200px;
+    text-shadow: 1px 1px 1px #5a5757c7;
+  }
+  
+  .cardsHome {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .cardHome h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    color: #e40303;
+  }
+  
+  .cardHome p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .cardHome {
+    background: rgba(255, 255, 255, 0.391); /* Fundo semitransparente para contraste */
+    border-radius: 8px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+    width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cardHome:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.6);
+  }
+  
+  .idoso {
+    max-width: 150px;
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  .atividades {
+    max-width: 150px;
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  .comunidade {
+    max-width: 150px;
+    width: 100%;
+    margin-right: 10px;
+}
+
+
+.containerCasal {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 40px;
+}
+
+.containerCasal .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%; 
+  filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.6));
+}
+
+.containerCasal .image img {
+  max-width: 550px; 
+  height: 550px; 
+}
+
+.containerCasal .text h1 {
+  padding-left: 30px;
+  text-align: justify; 
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 1px #5a5757c7;
+}
+
+.containerCasal .text p {
+  flex: 2;
+  padding-left: 30px;
+  text-align: justify; 
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 1px #5a5757c7;
+}
+
+.containerCasal .text a {
+  font-size: 1.3rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #5a5757c7;
+}

@@ -1,0 +1,75 @@
+
+/* Estilos globais do formulário */
+.signup form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signup label {
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .signup input {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .signup button {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Media Query para telas pequenas (dispositivos móveis) */
+  @media (max-width: 600px) {
+    form {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    input, button {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  
+    label {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Media Query para telas grandes (dispositivos com mais de 600px de largura) */
+  @media (min-width: 601px) {
+    form {
+      width: 80%;
+      padding: 20px;
+    }
+  
+    input, button {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  
+    label {
+      font-size: 1rem;
+    }
+  }
+  
