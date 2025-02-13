@@ -139,7 +139,7 @@ export default function RegisterForm() {
         setCpf('');
 
         // Redirecionar para a página do cliente ou home após o cadastro
-        navigate(`/perfil/cliente/${clienteId}`); // Página de perfil do cliente, por exemplo
+        navigate(`/perfil/user/`); // Página de perfil do cliente, por exemplo
       })
       .catch((error) => {
         notifyError('Erro ao incluir o um cliente!', error);

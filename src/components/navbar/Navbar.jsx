@@ -4,11 +4,14 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaUserCircle, FaSignInAlt, FaSignOutAlt, FaUserPlus } from 'react-icons/fa';
 import { isUserLoggedIn, logout } from '../../components/util/AuthenticationService';
+import { useNavigate } from 'react-router-dom';
 
 import "../../styles/Navbar.css";
 
 export default function Navbar() {
+
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const navigate = useNavigate();
 
     // Efeito para verificar se o usuário está logado
     useEffect(() => {
@@ -21,9 +24,7 @@ export default function Navbar() {
         if (isLoggedIn) {
             logout(); // Faz logout
             setIsLoggedIn(false); // Atualiza o estado após o logout
-        } else {
-            // Aqui pode ser seu código para realizar o login, por exemplo
-            setIsLoggedIn(true); // Simula login, você pode implementar a lógica de login real aqui
+            navigate('/'); // Redireciona para a página de login
         }
     };
 
