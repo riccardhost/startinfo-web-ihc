@@ -20,6 +20,9 @@ import Home from './pages/home/Home';
 import QuemSomos from './pages/quemsomos/QuemSomos';
 import Tutoriais from './pages/tutoriais/Tutoriais';
 import Contato from './pages/contato/Contato';
+import Cadastro from './pages/produtos/Cadastro';
+import LoginEx from './pages/produtos/LoginEx';
+import SalvaContato from './pages/produtos/SalvaContato';
 
 
 // Importação - Página do Perfil/Privadas
@@ -50,6 +53,11 @@ const Rotas = () => {
         <Route path="/quemsomos" element={<QuemSomos />} /> {/* Quem Somos */}
         <Route path="/tutoriais" element={<Tutoriais />} /> {/* Tutoriais */}
         <Route path="/contato" element={<Contato /> } /> {/* Contato */}
+        <Route path="/tutoriais/cadastro" element={<Cadastro />} /> {/* Cadastro */}
+        <Route path="/tutoriais/loginex" element={<LoginEx />} /> {/* Login */}
+        <Route path="/tutoriais/salvacontato" element={<SalvaContato />} /> {/* SalvaContato*/}
+        
+
 
         <Route
           path="/tutoriais/email"

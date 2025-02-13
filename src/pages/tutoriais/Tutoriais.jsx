@@ -31,21 +31,21 @@ export default function Tutoriais() {
         <div className="cardsTutorial">
 
           <div className="cardTutorial">
-            <h3>Aprenda a Usar o PIX!</h3>
+            <h3>Aprenda a se cadastrar</h3>
             <img src={pix} alt="Logomarca do Pix" className="pix" />
-            <Link to="/tutoriais/pix"><p> Saiba mais! </p></Link>
+            <Link to="/tutoriais/cadastro"><p> Saiba mais! </p></Link>
           </div>
 
           <div className="cardTutorial">
-            <h3>Aprenda a Usar o WhatsApp</h3>
+            <h3>Aprenda a fazer o login</h3>
             <img src={whatsApp} alt="Logomarca do WhatsApp" className="whatsapp" />
-            <Link to="/tutoriais/whatsapp"><p> Saiba mais! </p></Link>
+            <Link to="/tutoriais/loginex"><p> Saiba mais! </p></Link>
           </div>
 
           <div className="cardTutorial">
-            <h3>Aprenda a Usar o E-mail</h3>
+            <h3>Aprenda como salvar um contato</h3>
             <img src={email} alt="Logomarca do E-mail" className="email" />
-            <Link to="/tutoriais/email"><p> Saiba mais! </p></Link>
+            <Link to="/tutoriais/salvacontato"><p> Saiba mais! </p></Link>
           </div>
 
         </div>

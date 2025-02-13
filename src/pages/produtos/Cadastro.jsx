@@ -7,13 +7,13 @@ import whatsapp from "../../assets/whatsapp.ico";
 // Botão Returno - Ao clicar, redireciona para a página inicial (home)
 import ButtonReturn from '../../components/buttonreturn/ButtonReturn';
 
-import TutorialPix from '../../pages/produtos/TutorialPix';
+import TutorialCadastro from '../../pages/produtos/TutorialCadastro';
 
 // Importe os componentes Navbar / Footer
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer';
 
-export default function PIX() {
+export default function Cadastro() {
 
   return (
 
@@ -23,7 +23,7 @@ export default function PIX() {
       <Navbar/>
 
       {/* Componente - TUTORIAL DO EMAIL */}
-      <TutorialPix /> 
+      <TutorialCadastro/> 
 
       {/* Componente - FOOTER */}
       <Footer />

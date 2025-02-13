@@ -1,4 +1,3 @@
-
 import React from 'react';
 import "../../styles/ModeloTutorial.css"; // Importe o arquivo CSS para os estilos
 
@@ -8,13 +7,13 @@ import whatsapp from "../../assets/whatsapp.ico";
 // Botão Returno - Ao clicar, redireciona para a página inicial (home)
 import ButtonReturn from '../../components/buttonreturn/ButtonReturn';
 
-import TutorialWhatsApp from '../../pages/produtos/TutorialWhatsapp';
+import TutorialWhatsapp from '../../pages/produtos/TutorialWhatsapp';
 
 // Importe os componentes Navbar / Footer
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer';
 
-export default function WhatsApp() {
+export default function WHATSAPP() {
 
   return (
 
@@ -24,7 +23,7 @@ export default function WhatsApp() {
       <Navbar/>
 
       {/* Componente - TUTORIAL DO EMAIL */}
-      <TutorialWhatsApp /> 
+      <TutorialWhatsapp /> 
 
       {/* Componente - FOOTER */}
       <Footer />
