@@ -1,9 +1,12 @@
 
+
 import axios from "axios";
 import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
+import { notifyError, notifySuccess } from '../../components/util/Util';
+import { registerSuccessfulLoginForJwt } from '../../components/util/AuthenticationService';
 
-import whatsapp from "../../assets/whatsapp.ico"; 
+import whatsapp from "../../assets/whatsapp.ico";
 
 // Botão Returno - Ao clicar, redireciona para a página inicial (home)
 import ButtonReturn from '../../components/buttonreturn/ButtonReturn';
@@ -14,48 +17,135 @@ import logo from '../../assets/startinfox.png'; // Ajuste o caminho conforme nec
 export default function RegisterForm() {
 
   const [nomeCompleto, setNomeCompleto] = useState('');
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [foneCelular, setFoneCelular] = useState();
+  const [foneCelular, setFoneCelular] = useState('');
   const [cpf, setCpf] = useState('');
-  
-  // Redirecionar para a página home após o cadastro
+  const [errors, setErrors] = useState({});
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    salvar();
-  };
-  
-  function salvar() {
+  const validateForm = () => {
+    const errors = {};
 
-		let clienteRequest = {
-		    nomeCompleto: nomeCompleto,
-        username: username,
-        password: password,
-		    cpf: cpf,
-		    foneCelular: foneCelular,
-		}
-	
-		axios.post("http://localhost:8085/api/cliente", clienteRequest)
-		.then((response) => {
-		     console.log('Cliente cadastrado com sucesso!', response);
+    // Validação do nome completo
+    if (!nomeCompleto) {
+      errors.nomeCompleto = "Nome completo é obrigatório!";
+    }
+
+    // Validação do e-mail
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+      errors.username = "E-mail inválido!";
+    }
+
+    // Validação da senha
+    if (!password || password.length < 8) {
+      errors.password = "A senha deve ter pelo menos 8 caracteres!";
+    }
+
+    // Validação do telefone
+    if (!foneCelular || !/^\(\d{2}\)\s\d{5}-\d{4}$/.test(foneCelular)) {
+      errors.foneCelular = "Telefone inválido! Use o formato (XX) XXXXX-XXXX";
+    }
+
+    // Validação do CPF
+    if (!cpf || !/^\d{3}\.\d{3}\.\d{3}-\d{2}$/.test(cpf)) {
+      errors.cpf = "CPF inválido! Use o formato XXX.XXX.XXX-XX";
+    }
+
+    setErrors(errors);
+
+    return Object.keys(errors).length === 0;
+  };
+
+
+  // Função para formatar o telefone (XXX) XXXXX-XXXX
+  const formatPhone = (value) => {
+    // Remove tudo o que não for número
+    let formattedValue = value.replace(/\D/g, '');
+
+    // Aplica a máscara, com o limite de 15 caracteres
+    if (formattedValue.length <= 2) {
+      formattedValue = `(${formattedValue}`;
+    } else if (formattedValue.length <= 7) {
+      formattedValue = `(${formattedValue.slice(0, 2)}) ${formattedValue.slice(2)}`;
+    } else {
+      formattedValue = `(${formattedValue.slice(0, 2)}) ${formattedValue.slice(2, 7)}-${formattedValue.slice(7, 11)}`;
+    }
+
+    // Limita a 15 caracteres, incluindo a máscara
+    return formattedValue.slice(0, 15);
+  };
+
+
+  // Função para formatar o CPF XXX.XXX.XXX-XX
+  const formatCPF = (value) => {
+    // Remove tudo o que não for número
+    let formattedValue = value.replace(/\D/g, '');
+
+    // Limita a 11 números
+    if (formattedValue.length > 11) {
+      formattedValue = formattedValue.slice(0, 11);
+    }
+
+    // Aplica a máscara do CPF (XXX.XXX.XXX-XX)
+    if (formattedValue.length <= 3) {
+      formattedValue = formattedValue.slice(0, 3);
+    } else if (formattedValue.length <= 6) {
+      formattedValue = `${formattedValue.slice(0, 3)}.${formattedValue.slice(3, 6)}`;
+    } else if (formattedValue.length <= 9) {
+      formattedValue = `${formattedValue.slice(0, 3)}.${formattedValue.slice(3, 6)}.${formattedValue.slice(6, 9)}`;
+    } else {
+      formattedValue = `${formattedValue.slice(0, 3)}.${formattedValue.slice(3, 6)}.${formattedValue.slice(6, 9)}-${formattedValue.slice(9, 11)}`;
+    }
+
+    return formattedValue;
+  };
+
+  
+  const cadastrar = (e) => {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
+    let clienteRequest = {
+      nomeCompleto: nomeCompleto,
+      email: email,
+      password: password,
+      cpf: cpf,
+      foneCelular: foneCelular,
+    };
+
+    axios.post("http://localhost:8085/api/cliente", clienteRequest)
+      .then((response) => {
+        notifySuccess('Cliente cadastrado com sucesso!', response);
+
+        // Supondo que o token e o ID sejam retornados na resposta
+        const { token, clienteId } = response.data;
+
+        // Armazenar ID do cliente e token no localStorage
+        localStorage.setItem("clienteId", clienteId);
+        localStorage.setItem("token", token);
+
+        // Realizar o login com o token JWT
+        registerSuccessfulLoginForJwt(token);
 
         // Limpar os campos do formulário
         setNomeCompleto('');
-        setUsername('');
+        setEmail('');
         setPassword('');
         setFoneCelular('');
         setCpf('');
 
-        // Redirecionar para a página home após o cadastro
-        navigate('/'); 
-        })
+        // Redirecionar para a página do cliente ou home após o cadastro
+        navigate(`/perfil/cliente/${clienteId}`); // Página de perfil do cliente, por exemplo
+      })
+      .catch((error) => {
+        notifyError('Erro ao incluir o um cliente!', error);
+      });
+  };
 
-		.catch((error) => {
-		     console.log('Erro ao incluir o um cliente!', error)
-		})
-	}
 
   return (
 
@@ -67,30 +157,22 @@ export default function RegisterForm() {
         <div className="logo-container">
 
           <Link to="/">
-            <img src={logo} 
-            alt="Logo" 
-            className="logo" 
-            />
-
+            <img src={logo} alt="Logo" className="logo" />
           </Link>
 
           <div className="text-overlay">
-
             <h1>Seja bem-vindo <br />ao nosso Website!</h1>
             <p>Crie a Sua Conta para continuar explorando os nossos conteúdos!</p>
-
           </div>
 
         </div>
 
-        <form onSubmit={handleSubmit} className="formulary-register">
-  
-        <h3> FAÇA SEU CADASTRO </h3>
+        <form className="formulary-register" onSubmit={cadastrar}>
+
+          <h3>FAÇA SEU CADASTRO</h3>
 
           <div className="input-group">
-
             <label htmlFor="fullName">Nome Completo</label>
-
             <input
               type="text"
               id="fullName"
@@ -100,27 +182,27 @@ export default function RegisterForm() {
               required
             />
 
+            {errors.nomeCompleto && <span className="error">{errors.nomeCompleto}</span>}
+
           </div>
 
           <div className="input-group">
-
             <label htmlFor="username">E-mail</label>
-
             <input
               type="email"
               id="username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="exemplo@dominio.com"
               required
             />
 
+            {errors.username && <span className="error">{errors.username}</span>}
+
           </div>
 
           <div className="input-group">
-
             <label htmlFor="password">Senha</label>
-
             <input
               type="password"
               id="password"
@@ -130,40 +212,42 @@ export default function RegisterForm() {
               required
             />
 
+            {errors.password && <span className="error">{errors.password}</span>}
+
           </div>
 
           <div className="input-group">
-
             <label htmlFor="phone">Telefone</label>
-
             <input
               type="text"
               id="phone"
               value={foneCelular}
-              onChange={(e) => setFoneCelular(e.target.value)}
+              onChange={(e) => setFoneCelular(formatPhone(e.target.value))}
               placeholder="(XX) XXXXX-XXXX"
               required
             />
 
+            {errors.foneCelular && <span className="error">{errors.foneCelular}</span>}
+
           </div>
 
           <div className="input-group">
-
             <label htmlFor="cpf">CPF</label>
-
             <input
               type="text"
               id="cpf"
               value={cpf}
-              onChange={(e) => setCpf(e.target.value)}
+              onChange={(e) => setCpf(formatCPF(e.target.value))}
               placeholder="Digite seu CPF"
               required
             />
-            
+
+            {errors.cpf && <span className="error">{errors.cpf}</span>}
+
           </div>
 
           <div className="input-group">
-            <button type="submit" className="buttonRegister" onClick={() => salvar()}> CADASTRAR </button>
+            <button type="submit" className="buttonRegister">CADASTRAR</button>
           </div>
 
         </form>
@@ -171,10 +255,12 @@ export default function RegisterForm() {
       </div>
 
       <div className="whatsapp-icon">
+
         <a href="https://api.whatsapp.com/send?phone=5581995150302" target="_blank" rel="noopener noreferrer">
-          <img src={whatsapp} alt="WhatsApp"/>
+          <img src={whatsapp} alt="WhatsApp" />
         </a>
-      </div>    
+
+      </div>
 
       {/* Usando o componente BottomReturn */}
       <div>

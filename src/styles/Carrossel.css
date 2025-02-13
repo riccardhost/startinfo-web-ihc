@@ -60,3 +60,38 @@
     animation: fadeIn 3s ease-out;
   }
   
+
+/* Media Query para telas menores (como smartphones e tablets) */
+@media screen and (max-width: 768px) {
+  .carrossel-slider {
+      max-height: 200px; /* Reduzindo a altura do carrossel */
+  }
+
+  .carrossel-slider button {
+      font-size: 1.2rem; /* Diminuindo o tamanho dos botões */
+      padding: 8px; /* Ajustando o padding */
+  }
+
+  .carrossel-slider .prev, .carrossel-slider .next {
+      font-size: 1.2rem; /* Ajustando os botões para ficarem menores */
+  }
+
+  .carrossel-imagem img {
+      height: 200px; /* Reduzindo a altura da imagem */
+  }
+}
+
+@media screen and (width: 480px) {
+  .carrossel-slider {
+      max-height: 150px; /* Para dispositivos menores (smartphones) */
+  }
+
+  .carrossel-slider button {
+      font-size: 1rem; /* Ajustando ainda mais o tamanho dos botões */
+      padding: 6px; /* Menos padding */
+  }
+
+  .carrossel-imagem img {
+      height: 150px; /* Diminuindo ainda mais a altura da imagem */
+  }
+}

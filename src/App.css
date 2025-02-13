@@ -15,10 +15,36 @@ body {
 
 main {
   margin: 0px 220px;
-  padding: 40px;
+  padding: 100px;
   background: #e89404;
   border-radius: 0px;
 }
+
+/* Media Query para telas pequenas (como celulares) */
+@media screen and (max-width: 360px) {
+  main {
+    margin: 0px 20px; /* Reduz a margem para dispositivos móveis */
+    padding: 0px; /* Diminui o padding em telas menores */
+  }
+}
+
+/* Media Query para telas médias (como tablets) */
+@media screen and (min-width: 0px) {
+  main {
+    margin: 0px; /* Ajusta a margem para tablets */
+    padding: 40px; /* Ajusta o padding para telas médias */
+  }
+}
+
+/* Media Query para telas maiores (desktops) */
+@media screen and (min-width: 1024px) {
+  main {
+    margin: 0px 220px; /* Mantém a margem original em telas grandes */
+    padding: 100px; /* Mantém o padding original em telas grandes */
+  }
+}
+
+
 
 footer {
   text-align: center;

@@ -46,3 +46,38 @@
     background-color: #f4f4f4;
     padding: 2px 6px;
   }
+
+
+/* Media Query para telas menores (como smartphones) */
+@media screen and (max-width: 768px) {
+  .container-somos {
+      padding: 50px 0px 50px 0px;
+  }
+
+  .container-somos .AppGit {
+      margin: 30px;
+  }
+
+  .container-somos .AppGit-header {
+      font-size: 1.3em;
+      margin-bottom: 15px;
+  }
+
+  .container-somos .AppGit-content {
+      font-size: 1.1em;
+      max-width: 90%;
+      margin: 0 auto;
+  }
+
+  .container-somos .AppGit h1 {
+      font-size: 1.5em;
+  }
+
+  .container-somos .AppGit h2, .container-somos .AppGit h3 {
+      font-size: 1.2em;
+  }
+
+  .container-somos .AppGit code {
+      font-size: 14px;
+  }
+}

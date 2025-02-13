@@ -62,3 +62,39 @@
     opacity: 0.8;
   }
   
+
+/* Media Query para telas pequenas (máximo de 768px) */
+@media (max-width: 768px) {
+  .modelo-tutorial .modelo-navbar {
+      flex-direction: column; /* Muda a direção para coluna em telas menores */
+      align-items: flex-start; /* Alinha os itens à esquerda */
+  }
+
+  .modelo-tutorial .modelo-nav-links {
+      display: none; /* Oculta os links de navegação para telas pequenas */
+      flex-direction: column; /* Adiciona uma direção de coluna para os itens do menu */
+      gap: 10px;
+      margin-top: 10px;
+  }
+
+  .modelo-tutorial .modelo-navbar.open .modelo-nav-links {
+      display: flex; /* Exibe os links quando o menu for aberto */
+  }
+
+  .modelo-tutorial .modelo-auth-section {
+      flex-direction: column; /* Alinha os itens de autenticação em coluna */
+      gap: 10px;
+  }
+
+  .modelo-tutorial .modelo-logo a {
+      font-size: 20px; /* Ajusta o tamanho da fonte do logo para telas pequenas */
+  }
+
+  .modelo-tutorial .modelo-nav-link {
+      font-size: 16px; /* Reduz o tamanho da fonte para os links de navegação */
+  }
+
+  .modelo-tutorial .modelo-auth-button {
+      font-size: 16px; /* Ajusta o tamanho da fonte dos botões */
+  }
+}

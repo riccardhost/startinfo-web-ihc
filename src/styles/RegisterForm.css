@@ -28,6 +28,7 @@
     box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.665);
     border-radius: 10px;
     margin: 0px 150px;
+    border-top: 8px solid #cb0000;
   }
   
   /* Container da Imagem */
@@ -157,6 +158,11 @@
     box-shadow: 0px 0px 8px rgba(218, 0, 0, 0.7); 
   }
   
+  .formulary-register .error {
+    color: red;
+    font-size: .9rem;
+  }
+
   .formulary-register .buttonRegister {
     width: 100%;
     padding: 8px 16px;

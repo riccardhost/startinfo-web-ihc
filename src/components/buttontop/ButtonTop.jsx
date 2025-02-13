@@ -35,7 +35,7 @@ const ScrollToTopButton = () => {
         onClick={scrollToTop}
         style={styles.button}
       >
-        <i className="bi bi-arrow-up-circle-fill" style={{ fontSize: '4rem', color: ' #e89404' }}></i>
+        <i className="bi bi-arrow-up-circle-fill" style={{ fontSize: '3rem', color: ' #e89404' }}></i>
     
       </button>
 
@@ -56,6 +56,14 @@ const styles = {
     cursor: 'pointer',
     transition: 'all 0.3s ease',
     filter: 'drop-shadow(0px 5px 4px rgba(0, 0, 0, 0.85))',
+  },
+  '@media (max-width: 768px)': {
+    button: {
+      bottom: '20px', // Move o botão para cima em telas menores
+      left: '10px', // Ajusta a posição horizontal
+      padding: '8px 15px', // Reduz o padding
+      filter: 'drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.75))', // Altera o filtro para menos intensidade
+    }
   }
 };
 

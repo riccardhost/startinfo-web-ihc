@@ -14,6 +14,7 @@ import casal_idosos from "../../assets/casal_idosos-removebg.png";
 import Carrossel from '../../components/carrossel/Carrossel';
 
 // Importe os componentes Navbar, Header e Footer
+
 import Navbar from '../../components/navbar/Navbar';
 import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';

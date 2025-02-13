@@ -4,8 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
  
-.app-containerLogin * {
-    font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.navbar-modelo-tutorial .navbar-modelo-navbar * {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .navbar-modelo-tutorial .navbar-modelo-navbar {
@@ -22,6 +22,7 @@
     text-decoration: none;
     font-size: 2rem;
     font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.555);
 }
 
 .navbar-modelo-tutorial .navbar-modelo-nav-links {
@@ -41,7 +42,8 @@
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
-    letter-spacing: 1px;  
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.555);
 }
 
 /* Hover do botão */
@@ -92,6 +94,8 @@
     align-items: center;
     gap: 10px;
     text-decoration: none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.555);
+    transition: all 0.3s ease;
 }
 
 .navbar-modelo-tutorial .navbar-modelo-profile-link {
@@ -99,15 +103,16 @@
     text-decoration: none;
     display: flex;
     align-items: center;
+    transition: all 0.3s ease;
 }
 
 .navbar-modelo-tutorial .navbar-modelo-auth-button:hover, .navbar-modelo-tutorial .navbar-modelo-profile-link:hover {
-    opacity: 0.8;
+    opacity: 0.75;
 }
 
 /* Campo de pesquisa */
 .nav-search-container-bar {
-    width: 340px;
+    width: 360px;
     display: flex;
     justify-content: center; /* Centraliza o campo de pesquisa */
     position: relative;
@@ -118,24 +123,24 @@
 .nav-search-input-bar {
     width: 300px;
     height: 20px;
-    padding: 8px 50px 8px 12px; /* Espaço para o ícone */
+    padding: 8px 50px 8px 15px; /* Espaço para o ícone */
     font-size: 1rem;
     font-weight: 500;
     border: 2px solid #e89404;
-    border-radius: 5px;
+    border-radius: 70px;
     outline: none;
     transition: border-color 0.3s ease-in-out;
 }
 
 /* Colocando o ícone dentro do campo de pesquisa */
 .nav-search-input-bar:focus {
-    border-color: #da7000; /* Cor do foco */
+    border-color: #cb0000; /* Cor do foco */
 }
 
 /* Estilo para o botão de pesquisa */
 .nav-search-button-bar {
     position: absolute;
-    right: 5px;
+    right: 12px;
     top: 50%;
     transform: translateY(-50%); /* Alinha o ícone verticalmente ao centro */
     background: transparent;
@@ -149,5 +154,72 @@
 
 /* Efeito ao passar o mouse sobre o ícone */
 .nav-search-button-bar:hover {
-    color: #da7000;
+    color:  #cb0000;
 }
+
+
+/* Media Query para telas menores (mobile) */
+@media (max-width: 800px) {
+    .navbar-modelo-tutorial .navbar-modelo-navbar {
+        flex-direction: column; /* Alinha os itens em coluna */
+        padding: 20px 10px; /* Ajuste no padding para telas menores */
+    }
+
+    .navbar-modelo-tutorial .navbar-modelo-logo {
+        padding: 30px 0px;
+    }
+
+    .navbar-modelo-tutorial .navbar-modelo-logo a {
+        font-size: 3rem; /* Reduz o tamanho do logo para telas menores */
+    }
+
+    .navbar-modelo-tutorial .navbar-modelo-nav-links {
+        flex-direction: column; /* Coloca os links em uma coluna */
+        gap: 15px;
+        align-items: center; /* Centraliza os links */
+    }
+
+    .navbar-modelo-tutorial .navbar-modelo-nav-link {
+        padding: 8px 20px; /* Ajuste do padding para botões */
+        font-size: 1.5rem; /* Ajuste no tamanho da fonte */
+    }
+
+    .navbar-modelo-tutorial .navbar-modelo-auth-section {
+        flex-direction: column;
+        gap: 35px;
+        margin-bottom: 35px;
+    }
+
+    .nav-search-container-bar {
+        width: 360px; /* Ocupa toda a largura disponível */
+        margin-top: 10px;
+        display: flex;
+        justify-content: center; /* Centraliza o campo de pesquisa */
+        margin-bottom: 20px;
+        margin-top: 25px;
+    }
+
+    .nav-search-input-bar {
+        width: 340px; /* Reduz a largura do campo de pesquisa */
+        max-width: 340px; /* Limita a largura máxima do campo */
+        padding: 20px 20px; /* Menos padding nas laterais */
+        font-size: 1.4rem; /* Ajuste no tamanho da fonte */
+        margin-bottom: 20px;
+    }
+
+    .nav-search-button-bar {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-70%); /* Alinha o ícone verticalmente ao centro */
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        color: #e89404;
+        font-size: 2.4rem;
+        font-weight: 900;
+        transition: color 0.3s ease-in-out;
+    }
+}
+
+

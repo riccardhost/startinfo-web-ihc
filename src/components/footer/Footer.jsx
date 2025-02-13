@@ -18,7 +18,7 @@ export default function Footer() {
           <div className="footer-links">
             <h4>Institucional</h4>
             <ul>
-              <li><a href="/quemsomos">Quem Somos?</a></li>
+              <li><a href="/quemsomos">Sobre</a></li>
               <li><a href="/">Termos de Uso</a></li>
               <li><a href="/">Política de Privacidade</a></li>
               <li><a href="/">Mapa do Site</a></li>
@@ -67,7 +67,7 @@ export default function Footer() {
         </a>
       </div>
     
-      <p> © 2024 Start Info | TODOS OS DIREITOS RESERVADOS. </p>
+      <p> © 2025 Start Info | TODOS OS DIREITOS RESERVADOS. </p>
 
       <hr></hr>
 

@@ -11,7 +11,7 @@
 
 .app-containerLogin * {
     font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
+}
 
 /* Estilos do título do tutorial */
 .tituloTutorial {
@@ -26,7 +26,7 @@
   color: #000000;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 10px;
+  margin: 10px 0px;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Efeito sutil de sombra */
 }
 
@@ -52,11 +52,11 @@
 
 /* Estilos de cada card */
 .cardTutorial {
-  background: linear-gradient(145deg, #ffffff, #aaaaaa);
+  background: linear-gradient(90deg, #cdcdcd, #ffffff);
   border-radius: 10px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
-  width: 280px;
-  padding: 25px;
+  width: 300px;
+  padding: 10px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
   overflow: hidden;
@@ -65,14 +65,16 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center; /* Alinha os itens no centro horizontalmente */
+  border-top: 8px solid #cb0000;
 }
 
 /* Estilo do título dentro do card */
 .cardTutorial h3 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 600;
   text-transform: uppercase;
   color: #444444;
+  margin-top: 10px;
 }
 
 /* Estilo da imagem dentro do card */
@@ -88,17 +90,18 @@
 /* Estilo do botão/link */
 .cardTutorial p {
   font-size: 1rem;
-  color: #007BFF;
+  color: #2e54fd;
   font-weight: 800;
   text-decoration: none;
-  padding: 6px 80px;
-  background-color: transparent;
-  border: 2px solid #007BFF;
+  padding: 3px 70px;
+  margin-bottom: 20px;
+  border: 2px solid  #2e54fd;
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* Estilo do botão/link */
@@ -109,8 +112,8 @@
 /* Hover do botão */
 .cardTutorial p:hover {
   color: #fff;
-  background-color: #0067d4;
-  border-color: #004186;
+  background-color: #0044ff;
+  border-color: none;
   transform: translateY(-2px);
 }
 
@@ -145,3 +148,38 @@
 }
 
 
+/* Media Query para telas pequenas (máximo de 768px) */
+@media (max-width: 768px) {
+  .tituloTutorial h2 {
+    font-size: 2.2rem; /* Ajuste o tamanho do título para telas menores */
+  }
+
+  .tituloTutorial p {
+    font-size: 1.2rem; /* Ajusta o tamanho da descrição */
+  }
+
+  .cardsTutorial {
+    gap: 20px; /* Reduz o espaço entre os cards */
+    padding: 0 20px; /* Ajusta o padding para telas menores */
+  }
+
+  .cardTutorial {
+    width: 100%; /* Faz os cards ocuparem toda a largura disponível */
+    max-width: 320px; /* Limita a largura máxima de cada card */
+    margin-bottom: 20px; /* Adiciona espaçamento entre os cards */
+  }
+
+  .cardTutorial img {
+    width: 90px; /* Reduz o tamanho da imagem nos cards */
+    height: 90px; /* Ajuste proporcional da altura */
+  }
+
+  .cardTutorial p {
+    padding: 3px 50px; /* Ajusta o tamanho do padding para o botão */
+    font-size: 0.9rem; /* Reduz o tamanho da fonte do botão */
+  }
+
+  .cardTutorial:hover {
+    transform: translateY(-6px); /* Reduz o efeito de transformação no hover */
+  }
+}

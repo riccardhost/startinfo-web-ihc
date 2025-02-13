@@ -9,20 +9,15 @@
   border-radius: 8px;
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.665);
   background-color: #f9f9f9;
-}
-
-.contato-container h1 {
-  font-size: 1.9rem;
-  text-align: center;
-  margin: 0;
-  color: #000000;
-  text-shadow: 1px 1px 1px #5a5757c7;
+  border-top: 8px solid #cb0000;
 }
 
 .contato-container h3 {
   text-align: center;
   color: #000000;
   text-align: left;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
 }
 
 .contato-container .input-container {
@@ -79,8 +74,8 @@
 }
 
 .contato-container button {
-  width: 600px;
-  padding: 15px;
+  width: 150px;
+  padding: 6px;
   background-color: #e89404;
   color: white;
   font-size: 1.3rem;
@@ -90,7 +85,7 @@
   cursor: pointer;
   transition: background-color 0.3s;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.555);
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s;
 }
@@ -114,4 +109,36 @@
   font-size: 14px;
   margin-bottom: 10px;
   font-weight: bold;
+}
+
+
+/* Media Query para telas menores (como smartphones e tablets) */
+@media screen and (max-width: 768px) {
+  .contato-container {
+    width: 90%; /* Ajusta a largura do formulário */
+    padding: 15px; /* Reduz o padding */
+    margin: 20px auto; /* Ajusta a margem */
+  }
+
+  .contato-container h1 {
+    font-size: 1.6rem; /* Diminui o tamanho da fonte do título */
+  }
+
+
+  .contato-container h3 {
+    font-size: 1.1rem; /* Diminui o tamanho da fonte do título */
+  }
+
+
+  .contato-container .input-container input,
+  .input-container select,
+  .input-container textarea {
+    width: 87%; /* Faz os campos de input ocuparem toda a largura */
+    font-size: 0.95rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .contato-container button {
+    width: 100%; /* Faz o botão ocupar toda a largura */
+    font-size: 1.1rem; /* Ajusta o tamanho da fonte do botão */
+  }
 }

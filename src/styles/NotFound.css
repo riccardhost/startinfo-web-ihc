@@ -1,0 +1,136 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.notfound-container * {
+    font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* src/NotFound.css */
+.notfound-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e89404;
+    color: #cb0000;
+    text-align: center;
+  }
+  
+  .notfound-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 600px;
+    animation: fadeIn 3s ease-in-out;
+    border-top: 8px solid #cb0000;
+  }
+  
+  .notfound-title {
+    font-size: 220px;
+    font-weight: 900;
+    color: #cb0000;
+    margin: 0px;
+  }
+  
+  .notfound-subtitle {
+    font-size: 40px;
+    font-weight: 800;
+    color: #555;
+    margin: 10px;
+  }
+  
+  .notfound-message {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 30px;
+  }
+  
+  .notfound-home-link {
+    display: inline-block;
+    padding: 10px 40px;
+    background-color: #cb0000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  .notfound-home-link:hover {
+    background-color:#950000;
+  }
+  
+  /* Animação para o fade-in */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+/* Media Query para telas menores (como tablets e smartphones) */
+@media screen and (max-width: 768px) {
+  
+  .notfound-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    width: 70%;
+    max-width: 400px;
+    animation: fadeIn 3s ease-in-out;
+    border-top: 8px solid #cb0000;
+  }
+
+  .notfound-title {
+      font-size: 150px; /* Diminui o tamanho do título para telas menores */
+  }
+
+  .notfound-subtitle {
+      font-size: 30px; /* Diminui o tamanho do subtítulo */
+  }
+
+  .notfound-message {
+      font-size: 16px; /* Ajusta o tamanho da mensagem */
+  }
+
+  .notfound-home-link {
+      padding: 8px 30px; /* Ajusta o padding do botão */
+      font-size: 14px; /* Diminui o tamanho da fonte do botão */
+  }
+}
+
+/* Media Query para telas muito pequenas (smartphones) */
+@media screen and (max-width: 480px) {
+  .notfound-title {
+      font-size: 120px; /* Título ainda menor */
+  }
+
+  .notfound-subtitle {
+      font-size: 24px; /* Reduz mais o subtítulo */
+  }
+
+  .notfound-message {
+      font-size: 14px; /* Ajusta o tamanho da mensagem */
+  }
+
+  .notfound-home-link {
+      padding: 6px 20px; /* Ajusta ainda mais o padding do botão */
+      font-size: 12px; /* Diminui o tamanho da fonte do botão */
+  }
+}
+
+
+
+
+

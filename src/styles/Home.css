@@ -20,10 +20,10 @@
   }
   
   .tituloHome p {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     text-align: center;
     margin: 10px;
-    padding: 30px 200px;
+    padding: 30px 150px;
     text-shadow: 1px 1px 1px #5a5757c7;
   }
   
@@ -32,6 +32,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
+
   }
   
   .cardHome h3 {
@@ -46,13 +47,14 @@
   }
   
   .cardHome {
-    background: rgba(255, 255, 255, 0.391); /* Fundo semitransparente para contraste */
+    background: rgba(255, 255, 255, 0.553); /* Fundo semitransparente para contraste */
     border-radius: 8px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
     padding: 20px;
     text-align: center;
     width: 350px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 8px solid #cb0000;
   }
   
   .cardHome:hover {
@@ -119,4 +121,47 @@
   font-size: 1.3rem;
   color: #ffffff;
   text-shadow: 1px 1px 1px #5a5757c7;
+}
+
+
+/* Media Queries para Responsividade */
+
+/* Para telas pequenas (como celulares) */
+@media screen and (max-width: 768px) {
+  .tituloHome p {
+    padding: 20px 10px;
+    font-size: 1.4rem;
+  }
+
+  .cardsHome {
+    gap: 40px;
+  }
+
+  .cardHome {
+    width: 100%;
+  }
+
+  .containerCasal {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .containerCasal .image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .containerCasal .text h1 {
+    font-size: 2rem;
+  }
+
+  .containerCasal .text p {
+    font-size: 1.2rem;
+    padding-left: 0;
+  }
+
+  .containerCasal .text a {
+    font-size: 1.2rem;
+  }
 }

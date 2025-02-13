@@ -1,0 +1,141 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.user-profile-form-container * {
+    font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Container principal */
+.user-profile-form-container {
+  max-width: 900px;
+  margin: 35px auto;
+  padding: 20px 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  border-top: 8px solid #cb0000;
+}
+
+/* Título do formulário */
+.user-form-title {
+  text-align: center;
+  font-size: 1.5rem; /* Tamanho reduzido */
+  margin: 0px;
+  color: #333;
+}
+
+/* Estilos para as seções */
+h3 {
+  color: #000000;
+  margin-bottom: 5px;
+  font-size: 1rem; /* Tamanho reduzido */
+}
+
+/* Formulário de inputs */
+.user-profile-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Grupos de entrada */
+.user-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.user-form-group label {
+  font-size: .9rem; /* Tamanho reduzido */
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 1px;
+}
+
+.user-form-input {
+  padding: 8px;
+  font-size: 0.9rem; /* Tamanho reduzido */
+  border: 2px solid #e89404;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.user-form-input:focus {
+  border: 2px solid #da0000; 
+  box-shadow: 0px 0px 8px rgba(218, 0, 0, 0.7); 
+}
+
+/* Imagem de perfil */
+.user-profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  display: block;  /* Torna a imagem um bloco */
+  margin-left: auto;  /* Alinha à esquerda */
+  margin-right: auto;  /* Alinha à direita */
+}
+
+/* Botão de envio */
+.user-submit-button {
+  align-items: center;
+  width: 180px ;
+  grid-column: span 2;
+  padding: 6px;
+  background-color: #e89404;
+  color: white;
+  font-size: 1.3rem; /* Tamanho reduzido */
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.555);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.user-submit-button:hover {
+  background-color: #da7000;
+  color: #000000;
+  transform: scale(1); /* Ampliação ao passar o mouse */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.562); /* Sombra mais visível */
+}
+
+.user-submit-button:active {
+  color: #ffffff;
+  background-color: #eb0000; /* Cor mais escura no clique */
+  transform: scale(0.96); /* Leve redução ao clicar */
+}
+
+/* Seção de dados pessoais */
+.user-personal-data-section-colunaA {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Seção de endereço */
+.address-data-section-colunaB {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo para os inputs de tipo file */
+input[type="file"] {
+  margin-top: 0.5rem;
+  border: none;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .user-profile-form {
+    grid-template-columns: 1fr;
+  }
+
+  .user-submit-button {
+    grid-column: span 1;
+  }
+}

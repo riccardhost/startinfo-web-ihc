@@ -7,6 +7,12 @@
 
 /* --------- CÓDIGO CSS - FOOTER: FOOTER ------------- */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+ 
+.footer * {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .footer {
     background-color: #333333;
     padding: 60px 0px 40px 0px;
@@ -55,7 +61,7 @@
     font-size: 1em;
     color: #ffffff;
     text-decoration: none;
-    text-shadow: 2px 2px 2px #910000;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.555);
     transition: .3s ease;
 }
 
@@ -68,7 +74,7 @@
     display: flex;
     justify-content: space-around;
     /*padding: 10px;   */
-    font-size: 3em;
+    font-size: 3.3em;
 }
 
 .social-links li {
@@ -86,24 +92,36 @@
     color: #e89404;
 }
 
+
 /* Media Query para telas pequenas */
 @media (max-width: 768px) {
     .footer-row {
         flex-direction: column;
         align-items: center;
+        padding: 10px 20px; /* Adiciona um pequeno espaçamento para melhorar o layout */
     }
 
     .footer-links {
         flex: none;
         text-align: center;
+        margin-bottom: 20px; /* Adiciona um espaçamento entre os blocos de links */
     }
 
     .footer-links h4 {
-        font-size: 1.3em;
+        font-size: 1.2em; /* Ajusta o tamanho do título */
+        margin-bottom: 15px; /* Espaçamento abaixo do título */
     }
 
     .footer-links ul li a {
-        font-size: 1em;
+        font-size: 1em; /* Ajusta o tamanho da fonte para os links */
+        padding: 5px 0; /* Adiciona um pouco de espaçamento ao redor dos links */
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: space-around;
+        font-size: 2.2em;
+        margin: 10px;
     }
 
     .social-links {
@@ -112,20 +130,10 @@
     }
 
     .social-links li {
-        margin: 10px 0;
+        margin: 10px 0; /* Aumenta o espaçamento entre os itens sociais */
     }
 }
 
-/* Media Query para telas muito pequenas */
-@media (max-width: 640px) {
-    .footer-links h4 {
-        font-size: 1.4em;
-    }
-
-    .footer-links ul li {
-        font-size: 1.1em;
-    }
-}
 
 
 /* ---------- CÓDIGO CSS - COPYRIGHT ---------- */
@@ -206,14 +214,8 @@
 /* Responsividade */
 @media (max-width: 768px) {
     .whatsapp-icon img {
-        width: 55px;
+        width: 50px;
         /* Ajuste o tamanho do ícone em telas menores */
     }
 }
 
-@media (max-width: 480px) {
-    .whatsapp-icon img {
-        width: 55px;
-        /* Ajuste ainda mais o tamanho em telas muito pequenas */
-    }
-}
